@@ -33,7 +33,7 @@
   font-size: 20px;
   font-weight: bold;
   position: relative;
-  z-index: 10;
+  z-index: 0;
 }
 
 .top-main p::before {
@@ -426,9 +426,153 @@
     display: block;
   }
 
+  .sec_popup {
+    position: relative;
+  }
+
   .sec_popup .content {
     width: calc(100%);
     width: 300px;
   }
-  
+
+  .popup__background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    cursor: pointer;
+  }
+
+  .sec_popup .content {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .popup__background.is-show {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+
+  .sec_popup .content.is-show {
+    opacity: 1;
+    visibility: visible;
+    display: block;
+  }
+}
+
+.popup{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s;
+}
+
+.popup__background {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(254, 228, 64, 0.8);
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+.popup__inner {
+  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 87%;
+  max-width: 600px;
+  padding: 13px;
+  background-color: #fff;
+  z-index: 2;
+  box-shadow: rgb(0 0 0 / 20%) 0 2px 3px 0;
+}
+.popup img {
+  width: 100%;
+}
+.popup__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.content-player .detail-text {
+  font-size: 14px;
+  order: 3;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 14px;
+  font-family: 'Noto Sans JP';
+  font-style: initial;
+  line-height: 1.4;
+  font-weight: 400;
+  display: block;
+}
+
+.detail-subtitle {
+  margin-bottom: 5px;
+  padding: 5px 0 1px;
+  border-bottom: 2px solid #a2d2ff;
+  color: #a2d2ff;
+  font-weight: bold;
+}
+
+.popup-name {
+  margin-top: 8px;
+}
+
+.detail-text-color {
+  color: #a2d2ff;
+}
+
+.detail-text span {
+  color: #a2d2ff;
+  font-weight: 700;
+}
+
+.detail-text li{
+  display: flex;
+}
+
+.detail-text-title {
+  min-width: 100px;
+}
+
+.popup .content-player p {
+  position: absolute;
+  top: -28px;
+  left: -20px;
+  z-index: 3;
+  font-size: 60px;
+  color: #a2d2ff;
+}
+
+.popup .content-player {
+  padding: 10px 10px 11px 0;
 }
