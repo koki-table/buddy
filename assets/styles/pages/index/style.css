@@ -71,7 +71,7 @@
   left: 0;
   width: 210px;
   height: 68px;
-  background: url(/assets/images/pages/index/bg-flag-h2.png) top left no-repeat;
+  background-image: url(/assets/images/pages/index/bg-flag-h2.png);
   background-size: auto 100%;
   opacity: 0.05;
 }
@@ -99,6 +99,26 @@
   .content {
     width: calc(33.3% - 22px);
     margin: 20px 20px 0 0;
+  }
+}
+
+/* 下記追加分 */
+
+@media screen and (max-width: 767px) {
+  .about-content {
+    display: flex;
+    flex-flow: wrap;
+  }
+
+  .content {
+    width: calc(50% - 22px);
+    margin: 20px 20px 0 0;
+  }
+
+  .about-content::after {
+    content: "";
+    display: block;
+    width: 50%;
   }
 }
 
@@ -199,17 +219,13 @@
 
 .prev-inner:hover {
   cursor: pointer;
-} 
+}
 
 .next-inner {
   cursor: pointer;
 }
 
-
-
-
 @media screen and (max-width: 768px) {
-
   .container {
     position: relative;
     width: auto;
@@ -251,7 +267,7 @@
     background: #222;
     z-index: 2;
   }
-  
+
   .next-inner {
     position: absolute;
     top: 0;
@@ -261,7 +277,8 @@
     background: #222;
   }
 
-  .sliderlist__item img, .sliderlist__item{
+  .sliderlist__item img,
+  .sliderlist__item {
     width: 100px;
     height: auto;
   }
@@ -317,7 +334,7 @@
 
 @media screen and (max-width: 767px) {
   .content {
-    width: 250px;
+    width: 170px;
     margin: 0 auto;
     margin-bottom: 40px;
   }
@@ -395,4 +412,23 @@
 
 .timeline-Footer {
   display: none;
+}
+
+/* モーダル */
+@media screen and (min-width: 768px) {
+  .sec_popup {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sec_popup .about-content {
+    display: block;
+  }
+
+  .sec_popup .content {
+    width: calc(100%);
+    width: 300px;
+  }
+  
 }

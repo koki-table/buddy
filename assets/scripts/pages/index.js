@@ -53,3 +53,9 @@ const slider = function(){
 };
 
 slider();
+
+ScrollReveal().reveal('.content', { 
+    duration: 800, // アニメーションの完了にかかる時間
+    viewFactor: 0.2, // 0~1,どれくらい見えたら実行するか
+    reset: false  // 何回もアニメーション表示するか
+});
