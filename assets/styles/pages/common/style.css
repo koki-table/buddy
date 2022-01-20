@@ -20,6 +20,7 @@ a:hover {
 
 body {
   color: #222;
+  width: 100%;
 }
 
 .inner {
@@ -53,8 +54,6 @@ body {
   margin: 20px 0;
 }
 
-
-
 /* footer */
 
 .footer-inner {
@@ -68,18 +67,6 @@ body {
 
 .sns li {
   margin: 0 20px;
-}
-
-@media screen and (min-width: 768px) {
-  .sns {
-    display: flex;
-    justify-content: center;
-    padding: 60px 0 50px;
-  }
-
-  .sns li {
-    margin: 0 40px;
-  }
 }
 
 /* 追随メニュー */
@@ -103,14 +90,13 @@ body {
   text-decoration: none;
 }
 
-
 .global-nav.clone-nav {
   position: fixed;
-  bottom: -200px;
+  bottom: -60px;
   left: 0;
-  transition: all 0.7s ease-out;
+  transition: all 0.3s ease-out;
   background-color: #fff;
-  box-shadow: 0 2px 2px rgba(0,0,0,.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 .global-nav.clone-nav.is-fixed-nav {
   bottom: 0;
@@ -122,4 +108,21 @@ body {
 
 .clone-nav {
   display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .sns {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    min-width: 1280px;
+  }
+
+  .sns li {
+    margin: 0 40px;
+  }
+
+  .global-nav.clone-nav {
+    bottom: -100px;
+  }
 }
